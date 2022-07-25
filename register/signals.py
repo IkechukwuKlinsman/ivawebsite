@@ -1,19 +1,16 @@
-from pickle import TRUE
 from django.dispatch import receiver
 from django.db.models.signals import post_save,pre_save
 from .models import Waitlist
-# from django.contrib.auth import get_user_model
-# import random
-# from django.utils import timezone
-# from django.core.mail import send_mail
-# from django.conf import settings
+from django.core.mail import send_mail
+
 
 
 @receiver(post_save,sender=Waitlist)
-def send_mail(sender,instance,created,*args,**kwargs):
-    if instance.email is created == True :
+def welcome_mail(sender, instance, created, *args,**kwargs):
+
+    if created:
         
-        message= f"""Welcome!
+        message= f"""Welcome {instance.first_name}!
 # You have successfully registered on our platform! 
 # Regards,
 # IVATECH"""

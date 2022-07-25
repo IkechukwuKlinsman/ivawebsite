@@ -129,3 +129,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# DEFAULT_FROM_EMAIL = 'ikechukwuklinsman@gmail.com'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.gmass.co'
+# EMAIL_HOST_USER = "gmass"
+# EMAIL_HOST_PASSWORD = "5fe2ba88-0ef3-438b-b0af-1d4b4c1d8423"
+# EMAIL_PORT = 2525
+# EMAIL_USE_TLS = True
