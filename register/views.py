@@ -20,18 +20,6 @@ from rest_framework.authtoken.models import Token
 @api_view(['POST'])
 def waitlist(request):
 
-    # # def validate_email(self):
-    # email = self.validate_data['email']
-        
-
-    # try:
-    #     Waitlist.objects.filter(email=email).exists():
-    #         raise ValidationError(detail={
-    #                 "error":"Email already exists"
-    #             })
-    # except:
-    #     pass
-
     if request.method == 'POST':
 
         serializer = WaitlistSerializer(data=request.data)

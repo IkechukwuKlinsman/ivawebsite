@@ -6,14 +6,14 @@ from django.core.mail import send_mail
 
 
 @receiver(post_save,sender=Waitlist)
-def welcome_mail(sender, instance, created, *args,**kwargs):
+def welcome_mail(sender, instance, created,**kwargs):
 
-    if created:
-        
+    if instance.email: 
+
         message= f"""Welcome {instance.first_name}!
-# You have successfully registered on our platform! 
-# Regards,
-# IVATECH"""
+You have successfully registered on our platform! 
+Regards,
+IVATECH"""
         send_mail(
             subject="WAITLIST",
             message=message,
