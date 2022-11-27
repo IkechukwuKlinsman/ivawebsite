@@ -60,7 +60,7 @@ ROOT_URLCONF = 'ivawebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -130,10 +130,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-DEFAULT_FROM_EMAIL = 'ikechukwuklinsman@gmail.com'
+DEFAULT_FROM_EMAIL = 'ivatechapp@gmail.com'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmass.co'
 EMAIL_HOST_USER = "gmass"
-EMAIL_HOST_PASSWORD = "5fe2ba88-0ef3-438b-b0af-1d4b4c1d8423"
+EMAIL_HOST_PASSWORD = "1a02b7e1-a26c-4c93-963c-d33b883e67cc"
 EMAIL_PORT = 2525
 EMAIL_USE_TLS = True
